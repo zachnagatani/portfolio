@@ -1,0 +1,245 @@
+/* Global */
+
+
+/* Change sizing to border box to create grid system; do a simple CSS reset */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+} 
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+}
+
+.container {
+	width: 1120px;
+	margin: 0 auto;
+}
+
+/* Add helper class to make images responsive where needed */
+
+.img-responsive {
+	max-width: 100%;
+}
+
+/* Grid System */
+
+/* Clearfix the container (.row) for the floated columns */
+
+.row {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+/* Float every column to the left and create gutters*/
+
+[class*='col-'] {
+	float: left;
+	padding-left: 30px;
+}
+
+/* Remove the left gutter of the first column to align flush with container */
+
+[class*='col-']:first-of-type {
+	padding-left: 0;
+}
+
+.col-2 {
+	width: 50%;
+}
+
+.col-3 {
+	width: 33.333%;
+}
+
+.col-4 {
+	width: 25%;
+}
+
+.col-5 {
+	width: 20%;
+}
+
+.col-6 {
+	width: 16.666%;
+}
+
+.col-7 {
+	width: 14.285%;
+}
+
+.col-8 {
+	width: 12.5%;
+}
+
+.col-9 {
+	width: 11.111%;
+}
+
+.col-10 {
+	width: 10%;
+}
+
+.col-11 {
+	width: 9.0909%;
+}
+
+.col-12 {
+	width: 8.333%;
+}
+
+/* Header */
+
+.main-header {
+	margin-top: 50px;
+	width: 100%;
+}
+
+.head-title {
+	float: right;
+	font-weight: 400;
+	color: #676857;
+}
+
+.head-title h1 {
+	font-weight: 300;
+	margin-bottom: 10px;
+	font-size: 4rem;
+}
+
+.head-title p {
+	text-align: right;
+}
+
+.header-divider {
+	margin-top: 30px;
+	border: none;
+	height: 4px;
+	color: #bcbcbc;
+	background-color: #bcbcbc;
+}
+
+
+
+/* Hero */
+
+#hero {
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#hero img {
+	max-width: 100%;
+}
+
+/* Portfolio */
+
+#portfolio {
+	margin-bottom: 30px;
+}
+
+/* Target all columns to align the text in the center of #portfolio */
+
+#portfolio [class*='col-'] {
+	text-align: center;
+}
+
+#portfolio img {
+	max-width: 100%;
+	min-height: 233px;
+}
+
+#portfolio h2 {
+	color: #bcbcbc;
+	font-weight: 400;
+	font-size: 2.5rem;
+	margin: 0 0 10px 10px;
+}
+
+#portfolio h3 {
+	color: #676857;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+#portfolio a {
+	text-decoration: none;
+	color: #676857;
+	font-weight: 300;
+}
+
+#portfolio a:hover {
+	font-weight: 400;
+}
+
+@media screen and (max-width: 1150px) {
+	.container {
+		width: 960px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.container{
+		width: 768px;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.container {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.col-3 {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+
+	.col-3 img {
+		width: 292px;
+	}
+
+	.col-3:last-of-type {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	#portfolio h2 {
+		margin-left: 0;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.main-header img {
+		width: 125px;
+		height: 71.5px;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.head-title {
+		float: none;
+		text-align: center;
+	}
+
+	.head-title p {
+		text-align: center;
+	}
+
+	.col-3 {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.col-3 img {
+		width: 100%;
+	}
+
+}
